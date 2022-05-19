@@ -20,7 +20,8 @@ public class Main {
     }
 
     private static String verifyName(String name) {
-        String regexForNameVerifying = "([В,в]ячеслав)";
+        String regexForNameVerifying = "(вячеслав)";
+        name = name.toLowerCase();
         Pattern pattern = Pattern.compile(regexForNameVerifying);
         Matcher matcher = pattern.matcher(name);
         if (matcher.find()) {
@@ -33,5 +34,3 @@ public class Main {
 
 
 }
-
-
